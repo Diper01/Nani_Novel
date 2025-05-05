@@ -1,0 +1,38 @@
+@disableControls
+@showUI 
+
+Narrator: "High atop the mountain peak, the air is thin and cold. In your hand you hold the Crystal of Lumina – a tear-shaped gem that glows with an inner azure flame. Legends say it was forged by the first druids and contains the power to restore balance to the land."
+
+@char Rowan.Neutral pos:20,15
+Rowan.Neutral: Welcome back, {playerName}. You endured the trial and retrieved the Crystal of Lumina.
+
+@char Liana.Neutral pos:80,15
+Ember.Neutral: I’m glad you’re safe. And you bring the Crystal at last?
+Ember.Neutral:  Its gentle glow fills me with hope for our village’s future.
+
+@choice "Give the artifact to Elder Rowan." goto:Final_Update.Rowan
+@choice "Give the artifact to Ember." goto:Final_Update.Ember
+@choice "Keep it for yourself." goto:Final_Update.Mine
+@stop
+
+# Rowan
+@char ElderRowan.Encouraging pos:20,15
+Rowan.Encouraging: Thank you, brave one. With this crystal, our fields will heal and the spring will flow once more.
+@goto Final_Update.AfterChoice
+
+# Ember
+@char Liana.Happy pos:80,15
+Ember.Happy: I will protect it with my life. Under its light, our people will find courage.
+@goto Final_Update.AfterChoice
+
+# Mine
+@char You.Proud pos:50,15
+You.Proud: This power is too great to relinquish so soon. I must learn its secrets before entrusting it to anyone.
+Narrator: "Both Elder Rowan and Liana watch you in stunned silence as the crystal’s glow intensifies between your hands."
+@goto Final_Update.AfterChoice
+  
+
+# AfterChoice
+@hideUI  time:0.5
+@disableControls
+@stop

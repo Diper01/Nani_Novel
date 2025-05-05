@@ -1,0 +1,20 @@
+@showUI
+
+
+@char Player.Thoughtful pos:20,15
+Player.Thoughtful: I don’t see anyone around… 
+
+@char Player.Confused pos:20,15
+Player.Confused: Maybe they’re at the camp by the old oak tree.
+
+@hide Player
+Narration: Moonlight filters through the pines, illuminating empty tents and cold coals.
+Narration: A soft breeze carries distant voices—could that be them?
+
+@char Player.Determined pos:20,15
+Player.Determined: I’ll go check the camp. Stay alert.
+
+@hide Player
+Narration: You step forward, shadows dancing at your feet as you head toward the campsite.
+
+@hideUI time:0.5

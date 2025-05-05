@@ -1,0 +1,23 @@
+@disableControls
+@showUI
+@back CrystalCaveEntrance
+
+;Ember Dialog 
+@char Ember.Neutral pos:20,15
+Ember.Neutral: Ah, {playerName}, you’ve arrived. To enter the Crystal Cave, you must win it in intellectual game.
+
+@char Ember.Thoughtful pos:20,15
+Ember.Thoughtful: Are you ready for the Trial?
+
+@char You.Neutral pos:80,15
+You.Neutral: Yes, begin the trial.
+
+@char Ember.Proud pos:20,15
+Ember.Proud: Excellent. Let the Light Trial commence.
+
+Narration: Follow the marker on the map.
+Narration: You need to go to the house on north-east corner of the map. There you will accept the trial.
+
+@hideChars time:0.5
+@hideUI time:0.5
+@enableControls

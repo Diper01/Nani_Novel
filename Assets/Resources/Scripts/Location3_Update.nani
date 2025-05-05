@@ -1,0 +1,28 @@
+@disableControls
+@showUI
+
+@char You.Thoughtful pos:20,15
+@animate You posY:15,17,15 time:1,1,1 loop:true wait:false easing:easeInOutSine
+You.Thoughtful: I think I've come to the right place.
+
+@char You.Determined pos:20,15
+@animate You scale:1,1.1,1 time:0.3,0.3 wait:false easing:easeOutElastic
+You.Determined: Then I won’t hesitate and start the trial.
+;start mini game
+
+@hideUI time:0.5
+@startMiniGame
+
+# WinMiniGame
+@showUI
+
+@char You.Proud pos:20,15
+@animate You scale:1,1.15,1 time:0.3,0.3 wait:false easing:easeOutBounce
+You.Proud: You completed the game and received an artifact!
+
+@char You.Surprised pos:20,15
+@shake You count:2 power:1.5
+You.Surprised: Return to the mountain peak and tell Ember you succeeded.
+
+@hideUI time:0.5
+@enableControls

@@ -1,0 +1,37 @@
+@disableControls
+@showUI
+@back Camp
+@playMusic CampTheme
+
+@input inputName summary:What is your name?
+@stop
+@set playerName=inputName
+
+@back !visible time:0.5
+@char You.Thoughtful pos:20,15
+@animate You scale:1,1.05,1 time:0.3,0.3 loop:2 wait:false easing:easeOutBack
+You.Thoughtful: Well met, {playerName}. I awaken beside an old campfire.
+You.Thoughtful: Tall pines surround me, their needles whispering in the night breeze.
+
+;Rowan 
+@char Rowan.Neutral pos:100,15 look:left       ; спочатку за екраном (X=100%)
+@animate Rowan posX:85 time:0.5 wait:true easing:easeOutQuad
+@animate Rowan posY:15,17,15 time:1,1,1 loop:true wait:false easing:easeInOutSine
+Rowan.Neutral: Greetings, {playerName}. I am Elder Rowan, keeper of these woods.
+
+@char Rowan.Serious pos:85,15 look:left
+@shake Rowan count:2 power:1.5
+Rowan.Serious: A precious relic was stolen by bandits to the east—its loss threatens our village.
+Rowan.Serious: I entrust you with its recovery. Will you accept this task?
+
+@char You.Determined pos:20,15
+@animate You scale:1,1.1,1 time:0.2,0.2 wait:false easing:easeOutElastic
+You.Determined: I accept this quest.
+
+@char Rowan.Encouraging pos:85,15 look:left
+@animate Rowan scale:1,1.15,1 time:0.3,0.3 wait:false easing:easeOutBounce
+Rowan.Encouraging: Brave choice! Seek out the bandit camp in the Eastern Glade and reclaim the relic.
+
+@hideChars time:0.5
+@hideUI time:0.5
+@enableControls
